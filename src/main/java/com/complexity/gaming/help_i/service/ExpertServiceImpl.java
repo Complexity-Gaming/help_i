@@ -37,6 +37,7 @@ public class ExpertServiceImpl implements ExpertService {
     public Expert updateExpert(Long expertId, Expert expertDetails) {
         return expertRepository.findById(expertId).map(expert -> {
             expert.setName(expertDetails.getName());
+            expert.setEmail(expertDetails.getEmail());
             return expertRepository.save(expert);
         }).orElseThrow(()-> new ResourceNotFoundException("Expert","Id",expertId));
     }

@@ -4,7 +4,7 @@ import com.complexity.gaming.help_i.domain.model.AuditModel;
 
 import java.util.Date;
 
-public class PersonResource extends AuditModel {
+public abstract class PersonResource extends AuditModel {
 
     private Long id;
     private String name;

@@ -37,6 +37,7 @@ public class PlayerServiceImpl implements PlayerService {
     public Player updatePlayer(Long playerId, Player playerDetails) {
         return playerRepository.findById(playerId).map(player -> {
             player.setName(playerDetails.getName());
+            player.setEmail(playerDetails.getEmail());
             return playerRepository.save(player);
         }).orElseThrow(()-> new ResourceNotFoundException("Player","Id",playerId));
     }
