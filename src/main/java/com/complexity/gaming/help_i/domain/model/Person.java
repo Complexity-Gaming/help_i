@@ -7,10 +7,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
-@Entity
-@Table(name = "persons")
-public class Person extends AuditModel {
+@MappedSuperclass
+public abstract class Person extends AuditModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,6 @@ public class Person extends AuditModel {
 
     @NotNull
     @Size(max = 100)
-    @NaturalId
     private String name;
 
     @NotNull
@@ -28,6 +27,15 @@ public class Person extends AuditModel {
 
     @NotNull
     private Date birthDate;
+
+    public Person(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate) {
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+    }
+
+    public Person() {
+    }
 
     public long getId() {
         return id;
