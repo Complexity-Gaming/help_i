@@ -3,6 +3,7 @@ package com.complexity.gaming.help_i.service;
 import com.complexity.gaming.help_i.domain.model.Player;
 import com.complexity.gaming.help_i.domain.respository.PlayerRepository;
 import com.complexity.gaming.help_i.domain.service.PlayerService;
+import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +25,7 @@ public class PlayerServiceImpl implements PlayerService {
     @Override
     public Player getPlayerById(Long playerId) {
         return playerRepository.findById(playerId)
-                .orElseThrow();
+                .orElseThrow(()-> new ResourceNotFoundException("Player","Id",playerId));
     }
 
     @Override
@@ -37,7 +38,7 @@ public class PlayerServiceImpl implements PlayerService {
         return playerRepository.findById(playerId).map(player -> {
             player.setName(playerDetails.getName());
             return playerRepository.save(player);
-        }).orElseThrow();
+        }).orElseThrow(()-> new ResourceNotFoundException("Player","Id",playerId));
     }
 
     @Override
@@ -45,6 +46,6 @@ public class PlayerServiceImpl implements PlayerService {
         return playerRepository.findById(playerId).map(player -> {
             playerRepository.delete(player);
             return ResponseEntity.ok().build();
-        }).orElseThrow();
+        }).orElseThrow(()-> new ResourceNotFoundException("Player","Id",playerId));
     }
 }
