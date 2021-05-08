@@ -69,7 +69,7 @@ public class TrainingMaterialServiceImplTest {
         String template = "Resource %s not found for %s with value %s";
         when(trainingMaterialRepository.findById(id))
                 .thenReturn(Optional.empty());
-        String expectedMessage = String.format(template,"TM", "Id", id);
+        String expectedMessage = String.format(template,"Training", "Id", id);
         //Act
         Throwable exception = catchThrowable(() -> {
             TrainingMaterial foundTrainingMaterial = trainingMaterialService.getTrainingMaterialById(id);
