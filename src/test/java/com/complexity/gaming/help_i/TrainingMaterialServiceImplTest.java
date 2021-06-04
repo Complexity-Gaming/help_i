@@ -1,12 +1,12 @@
 package com.complexity.gaming.help_i;
 
-import com.complexity.gaming.help_i.domain.model.TrainingMaterial;
-import com.complexity.gaming.help_i.domain.respository.ExpertRepository;
-import com.complexity.gaming.help_i.domain.respository.PlayerRepository;
-import com.complexity.gaming.help_i.domain.respository.TrainingMaterialRepository;
-import com.complexity.gaming.help_i.domain.service.TrainingMaterialService;
+import com.complexity.gaming.help_i.domain.model.Training.TrainingMaterial;
+import com.complexity.gaming.help_i.domain.respository.Security.ExpertRepository;
+import com.complexity.gaming.help_i.domain.respository.Security.PlayerRepository;
+import com.complexity.gaming.help_i.domain.respository.Training.TrainingMaterialRepository;
+import com.complexity.gaming.help_i.domain.service.Training.TrainingMaterialService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
-import com.complexity.gaming.help_i.service.TrainingMaterialServiceImpl;
+import com.complexity.gaming.help_i.service.Training.TrainingMaterialServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
