@@ -1,4 +1,4 @@
-package com.complexity.gaming.help_i.domain.respository.Training;
+package com.complexity.gaming.help_i.domain.repository.Training;
 
 import com.complexity.gaming.help_i.domain.model.Training.TrainingMaterial;
 import org.springframework.data.domain.Page;
