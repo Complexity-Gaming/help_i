@@ -1,4 +1,4 @@
-package com.complexity.gaming.help_i.domain.respository.Application;
+package com.complexity.gaming.help_i.domain.repository.Application;
 
 import com.complexity.gaming.help_i.domain.model.Application.ExpertApplication;
 import org.springframework.data.domain.Page;

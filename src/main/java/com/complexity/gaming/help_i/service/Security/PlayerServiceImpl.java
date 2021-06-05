@@ -1,7 +1,7 @@
 package com.complexity.gaming.help_i.service.Security;
 
 import com.complexity.gaming.help_i.domain.model.Security.Player;
-import com.complexity.gaming.help_i.domain.respository.Security.PlayerRepository;
+import com.complexity.gaming.help_i.domain.repository.Security.PlayerRepository;
 import com.complexity.gaming.help_i.domain.service.Security.PlayerService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

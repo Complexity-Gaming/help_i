@@ -7,7 +7,7 @@ import com.complexity.gaming.help_i.resource.Security.PlayerResource;
 public class ExpertApplicationResource {
 
     private Long id;
-    private PlayerResource applicant;
+    private PlayerResource player;
     private ApplicationId tittle;
     private ApplicationDetail applicationDetails;
 
@@ -17,15 +17,6 @@ public class ExpertApplicationResource {
 
     public ExpertApplicationResource setId(Long id) {
         this.id = id;
-        return this;
-    }
-
-    public PlayerResource getApplicant() {
-        return applicant;
-    }
-
-    public ExpertApplicationResource setApplicant(PlayerResource applicant) {
-        this.applicant = applicant;
         return this;
     }
 
@@ -44,6 +35,15 @@ public class ExpertApplicationResource {
 
     public ExpertApplicationResource setTittle(ApplicationId tittle) {
         this.tittle = tittle;
+        return this;
+    }
+
+    public PlayerResource getPlayer() {
+        return player;
+    }
+
+    public ExpertApplicationResource setPlayer(PlayerResource player) {
+        this.player = player;
         return this;
     }
 }

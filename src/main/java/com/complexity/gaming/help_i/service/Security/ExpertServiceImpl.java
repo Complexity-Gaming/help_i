@@ -1,7 +1,7 @@
 package com.complexity.gaming.help_i.service.Security;
 
 import com.complexity.gaming.help_i.domain.model.Security.Expert;
-import com.complexity.gaming.help_i.domain.respository.Security.ExpertRepository;
+import com.complexity.gaming.help_i.domain.repository.Security.ExpertRepository;
 import com.complexity.gaming.help_i.domain.service.Security.ExpertService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
