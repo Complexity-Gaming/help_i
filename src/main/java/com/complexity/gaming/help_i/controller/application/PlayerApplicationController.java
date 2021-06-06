@@ -25,7 +25,7 @@ public class PlayerApplicationController {
     @Autowired
     private ExpertApplicationService expertApplicationService;
 
-    @GetMapping("/players/{playerId}/Applications")
+    @GetMapping("/players/{playerId}/applications")
     public Page<ExpertApplicationResource> getAllExpertApplicationByApplicantId(@PathVariable Long playerId, Pageable pageable) {
         List<ExpertApplicationResource> applications = expertApplicationService.getAllExpertApplicationsByApplicantId(playerId, pageable)
                 .getContent().stream().map(this::convertToResource)
@@ -33,7 +33,7 @@ public class PlayerApplicationController {
         return new PageImpl<>(applications, pageable, applications.size());
     }
 
-    @PostMapping("/players/{playerId}/Applications")
+    @PostMapping("/players/{playerId}/applications")
     public ExpertApplicationResource sendExpertApplication(@PathVariable Long playerId,
                                                             @Valid @RequestBody SaveExpertApplicationResource resource) {
         return convertToResource(expertApplicationService.sendExpertApplication(playerId, convertToEntity(resource)));
