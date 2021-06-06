@@ -8,14 +8,10 @@ public class ApplicationDetail {
 
     private String Description;
     private URI VideoApplication;
-    private String ReviewComment;
-    private EApplicationStatus Status;
 
-    public ApplicationDetail(String description, URI videoApplication, String reviewComment, EApplicationStatus status) {
+    public ApplicationDetail(String description, URI videoApplication) {
         Description = description;
         VideoApplication = videoApplication;
-        ReviewComment = reviewComment;
-        Status = status;
     }
 
     public ApplicationDetail() {
@@ -29,14 +25,6 @@ public class ApplicationDetail {
         return VideoApplication;
     }
 
-    public String getReviewComment() {
-        return ReviewComment;
-    }
-
-    public EApplicationStatus getStatus() {
-        return Status;
-    }
-
     private ApplicationDetail setDescription(String description) {
         Description = description;
         return this;
@@ -47,13 +35,4 @@ public class ApplicationDetail {
         return this;
     }
 
-    private ApplicationDetail setReviewComment(String reviewComment) {
-        ReviewComment = reviewComment;
-        return this;
-    }
-
-    private ApplicationDetail setStatus(EApplicationStatus status) {
-        Status = status;
-        return this;
-    }
 }
