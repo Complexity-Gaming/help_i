@@ -1,11 +1,10 @@
 package com.complexity.gaming.help_i;
 
-import com.complexity.gaming.help_i.domain.model.Application.ExpertApplication;
-import com.complexity.gaming.help_i.domain.model.Session.IndividualSession;
-import com.complexity.gaming.help_i.domain.repository.Session.IndividualSessionRepository;
-import com.complexity.gaming.help_i.domain.service.Session.IndividualSessionService;
+import com.complexity.gaming.help_i.domain.model.session.IndividualSession;
+import com.complexity.gaming.help_i.domain.repository.session.IndividualSessionRepository;
+import com.complexity.gaming.help_i.domain.service.session.IndividualSessionService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
-import com.complexity.gaming.help_i.service.Session.IndividualSessionServiceImpl;
+import com.complexity.gaming.help_i.service.session.IndividualSessionServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -60,7 +59,7 @@ public class IndividualSessionServiceImplTest {
         String template = "Resource %s not found for %s with value %s";
         when(individualSessionRepository.findById(id))
                 .thenReturn(Optional.empty());
-        String expectedMessage = String.format(template,"Session", "Id", id);
+        String expectedMessage = String.format(template,"session", "Id", id);
         //Act
         Throwable exception = catchThrowable(() -> {
             IndividualSession foundIndividualSession = individualSessionService.getIndividualSessionById(id);
