@@ -31,8 +31,6 @@ public class TrainingMaterial {
             mappedBy = "trainings")
     private List<Player> players;
 
-
-
     public TrainingMaterial() {
     }
 

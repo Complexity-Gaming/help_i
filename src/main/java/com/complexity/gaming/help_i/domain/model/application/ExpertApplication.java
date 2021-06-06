@@ -25,14 +25,19 @@ public class ExpertApplication {
     @JsonIgnore
     private Player player;
 
+    private String reviewComment;
+
+    private EApplicationStatus status;
 
     public ExpertApplication() {
     }
 
-    public ExpertApplication(ApplicationId tittle, ApplicationDetail applicationDetails, Player player) {
+    public ExpertApplication(ApplicationId tittle, ApplicationDetail applicationDetails, Player player, String reviewComment, EApplicationStatus status) {
         this.tittle = tittle;
         this.applicationDetails = applicationDetails;
         this.player = player;
+        this.reviewComment = reviewComment;
+        this.status = status;
     }
 
     public Long getId() {
@@ -68,6 +73,24 @@ public class ExpertApplication {
 
     public ExpertApplication setPlayer(Player player) {
         this.player = player;
+        return this;
+    }
+
+    public String getReviewComment() {
+        return reviewComment;
+    }
+
+    public ExpertApplication setReviewComment(String reviewComment) {
+        this.reviewComment = reviewComment;
+        return this;
+    }
+
+    public EApplicationStatus getStatus() {
+        return status;
+    }
+
+    public ExpertApplication setStatus(EApplicationStatus status) {
+        this.status = status;
         return this;
     }
 }

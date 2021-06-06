@@ -1,5 +1,6 @@
 package com.complexity.gaming.help_i.service.application;
 
+import com.complexity.gaming.help_i.domain.model.application.EApplicationStatus;
 import com.complexity.gaming.help_i.domain.model.application.ExpertApplication;
 import com.complexity.gaming.help_i.domain.model.security.Expert;
 import com.complexity.gaming.help_i.domain.repository.application.ExpertApplicationRepository;
@@ -45,13 +46,13 @@ public class ExpertApplicationServiceImpl implements ExpertApplicationService {
     public ExpertApplication sendExpertApplication(Long applicantId, ExpertApplication expertApplication) {
         return playerRepository.findById(applicantId).map(player -> {
             expertApplication.setPlayer(player);
+            expertApplication.setStatus(EApplicationStatus.PENDING);
             return expertApplicationRepository.save(expertApplication);
         }).orElseThrow(()-> new ResourceNotFoundException( "Player", "Id", applicantId));
     }
 
     @Override
     public Expert reviewApplication(Long expertApplicationId, String review, String reviewComment) {
-
         return null;
     }
 

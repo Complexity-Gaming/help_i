@@ -1,6 +1,9 @@
 package com.complexity.gaming.help_i.domain.model.training;
 
+import com.complexity.gaming.help_i.domain.model.Money;
+
 import javax.persistence.Embeddable;
+import javax.persistence.Embedded;
 import java.net.URI;
 import java.util.Date;
 
@@ -9,17 +12,17 @@ public class TrainingDetail {
 
     private URI videoUri;
     private Date publishedDate;
-    private String currency;
-    private Double price;
 
-    public TrainingDetail(URI videoUri,Date publishedDate,String currency,Double price) {
-        this.videoUri = videoUri;
-        this.publishedDate = publishedDate;
-        this.currency = currency;
-        this.price = price;
-    }
+    @Embedded
+    private Money price;
 
     public TrainingDetail() {
+    }
+
+    public TrainingDetail(URI videoUri, Date publishedDate, Money price) {
+        this.videoUri = videoUri;
+        this.publishedDate = publishedDate;
+        this.price = price;
     }
 
     public URI getVideoUri() {
@@ -28,14 +31,6 @@ public class TrainingDetail {
 
     public Date getPublishedDate() {
         return publishedDate;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 
     private TrainingDetail setVideoUri(URI videoUri) {
@@ -48,14 +43,7 @@ public class TrainingDetail {
         return this;
     }
 
-    private TrainingDetail setCurrency(String currency) {
-        this.currency = currency;
-        return this;
+    public Money getPrice() {
+        return price;
     }
-
-    private TrainingDetail setPrice(Double price) {
-        this.price = price;
-        return this;
-    }
-
 }
