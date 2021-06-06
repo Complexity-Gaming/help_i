@@ -1,12 +1,12 @@
 package com.complexity.gaming.help_i;
 
-import com.complexity.gaming.help_i.domain.model.Session.ScheduledSession;
-import com.complexity.gaming.help_i.domain.repository.Security.ExpertRepository;
-import com.complexity.gaming.help_i.domain.repository.Security.PlayerRepository;
-import com.complexity.gaming.help_i.domain.repository.Session.ScheduledSessionRepository;
-import com.complexity.gaming.help_i.domain.service.Session.ScheduledSessionService;
+import com.complexity.gaming.help_i.domain.model.session.ScheduledSession;
+import com.complexity.gaming.help_i.domain.repository.security.ExpertRepository;
+import com.complexity.gaming.help_i.domain.repository.security.PlayerRepository;
+import com.complexity.gaming.help_i.domain.repository.session.ScheduledSessionRepository;
+import com.complexity.gaming.help_i.domain.service.session.ScheduledSessionService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
-import com.complexity.gaming.help_i.service.Session.ScheduledSessionServiceImpl;
+import com.complexity.gaming.help_i.service.session.ScheduledSessionServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

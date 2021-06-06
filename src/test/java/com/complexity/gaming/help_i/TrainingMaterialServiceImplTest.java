@@ -1,12 +1,12 @@
 package com.complexity.gaming.help_i;
 
-import com.complexity.gaming.help_i.domain.model.Training.TrainingMaterial;
-import com.complexity.gaming.help_i.domain.repository.Security.ExpertRepository;
-import com.complexity.gaming.help_i.domain.repository.Security.PlayerRepository;
-import com.complexity.gaming.help_i.domain.repository.Training.TrainingMaterialRepository;
-import com.complexity.gaming.help_i.domain.service.Training.TrainingMaterialService;
+import com.complexity.gaming.help_i.domain.model.training.TrainingMaterial;
+import com.complexity.gaming.help_i.domain.repository.security.ExpertRepository;
+import com.complexity.gaming.help_i.domain.repository.security.PlayerRepository;
+import com.complexity.gaming.help_i.domain.repository.training.TrainingMaterialRepository;
+import com.complexity.gaming.help_i.domain.service.training.TrainingMaterialService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
-import com.complexity.gaming.help_i.service.Training.TrainingMaterialServiceImpl;
+import com.complexity.gaming.help_i.service.training.TrainingMaterialServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -69,7 +69,7 @@ public class TrainingMaterialServiceImplTest {
         String template = "Resource %s not found for %s with value %s";
         when(trainingMaterialRepository.findById(id))
                 .thenReturn(Optional.empty());
-        String expectedMessage = String.format(template,"Training", "Id", id);
+        String expectedMessage = String.format(template,"training", "Id", id);
         //Act
         Throwable exception = catchThrowable(() -> {
             TrainingMaterial foundTrainingMaterial = trainingMaterialService.getTrainingMaterialById(id);

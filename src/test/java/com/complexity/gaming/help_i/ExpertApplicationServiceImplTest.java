@@ -1,12 +1,12 @@
 package com.complexity.gaming.help_i;
 
-import com.complexity.gaming.help_i.domain.model.Application.ExpertApplication;
-import com.complexity.gaming.help_i.domain.repository.Application.ExpertApplicationRepository;
-import com.complexity.gaming.help_i.domain.repository.Security.ExpertRepository;
-import com.complexity.gaming.help_i.domain.repository.Security.PlayerRepository;
-import com.complexity.gaming.help_i.domain.service.Application.ExpertApplicationService;
+import com.complexity.gaming.help_i.domain.model.application.ExpertApplication;
+import com.complexity.gaming.help_i.domain.repository.application.ExpertApplicationRepository;
+import com.complexity.gaming.help_i.domain.repository.security.ExpertRepository;
+import com.complexity.gaming.help_i.domain.repository.security.PlayerRepository;
+import com.complexity.gaming.help_i.domain.service.application.ExpertApplicationService;
 import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
-import com.complexity.gaming.help_i.service.Application.ExpertApplicationServiceImpl;
+import com.complexity.gaming.help_i.service.application.ExpertApplicationServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -69,7 +69,7 @@ public class ExpertApplicationServiceImplTest {
         String template = "Resource %s not found for %s with value %s";
         when(expertApplicationRepository.findById(id))
                 .thenReturn(Optional.empty());
-        String expectedMessage = String.format(template,"Application", "Id", id);
+        String expectedMessage = String.format(template,"application", "Id", id);
         //Act
         Throwable exception = catchThrowable(() -> {
             ExpertApplication foundExpertApplication = expertApplicationService.getExpertApplicationById(id);
