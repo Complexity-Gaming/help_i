@@ -5,7 +5,7 @@ import com.complexity.gaming.help_i.security.domain.repository.ExpertRepository;
 import com.complexity.gaming.help_i.security.domain.repository.PlayerRepository;
 import com.complexity.gaming.help_i.training.domain.repository.TrainingMaterialRepository;
 import com.complexity.gaming.help_i.training.domain.service.TrainingMaterialService;
-import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
+import com.complexity.gaming.help_i.shared.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
