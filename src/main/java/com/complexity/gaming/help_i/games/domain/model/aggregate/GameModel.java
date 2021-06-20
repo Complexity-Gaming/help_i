@@ -12,8 +12,9 @@ public class GameModel {
     private Long providerId;
     @Embedded
     private ProviderInformation providerInformation;
-    public void SetProviderInformation(){
-        this.providerInformation = new ProviderInformation();
+    public GameModel SetProviderInformation(ProviderInformation providerInformation){
+        this.providerInformation = providerInformation;
+        return this;
     };
 
     public Long getId() {
@@ -32,6 +33,10 @@ public class GameModel {
     public GameModel setProviderId(Long providerId) {
         this.providerId = providerId;
         return this;
+    }
+
+    public ProviderInformation getProviderInformation() {
+        return providerInformation;
     }
 }
 
