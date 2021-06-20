@@ -1,6 +1,6 @@
 package com.complexity.gaming.help_i.session.resource;
 
-import com.complexity.gaming.help_i.domain.model.Money;
+import com.complexity.gaming.help_i.shared.model.Money;
 import com.complexity.gaming.help_i.session.domain.model.ScheSessionId;
 import com.complexity.gaming.help_i.session.domain.model.SessionDate;
 

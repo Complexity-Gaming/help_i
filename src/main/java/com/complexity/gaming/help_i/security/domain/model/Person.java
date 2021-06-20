@@ -1,7 +1,7 @@
 package com.complexity.gaming.help_i.security.domain.model;
 
 
-import com.complexity.gaming.help_i.domain.model.AuditModel;
+import com.complexity.gaming.help_i.shared.model.AuditModel;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -46,17 +46,13 @@ public abstract class Person extends AuditModel {
         return this;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public Person setName(String name) {
         this.name = name;
         return this;
     }
-
-    public String getEmail() {
-        return email;
+    public Person setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+        return this;
     }
 
     public Person setEmail(String email) {
@@ -64,12 +60,18 @@ public abstract class Person extends AuditModel {
         return this;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+
+
     public Date getBirthDate() {
         return birthDate;
     }
 
-    public Person setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-        return this;
+
+    public String getName() {
+        return name;
     }
 }

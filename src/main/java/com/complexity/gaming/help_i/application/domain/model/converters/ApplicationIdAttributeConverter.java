@@ -1,6 +1,6 @@
 package com.complexity.gaming.help_i.application.domain.model.converters;
 
-import com.complexity.gaming.help_i.application.domain.model.ApplicationId;
+import com.complexity.gaming.help_i.application.domain.model.valueobjects.ApplicationId;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

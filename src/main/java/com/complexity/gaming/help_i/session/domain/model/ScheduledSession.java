@@ -1,6 +1,6 @@
 package com.complexity.gaming.help_i.session.domain.model;
 
-import com.complexity.gaming.help_i.domain.model.Money;
+import com.complexity.gaming.help_i.shared.model.Money;
 import com.complexity.gaming.help_i.security.domain.model.Expert;
 import com.complexity.gaming.help_i.security.domain.model.Player;
 import com.complexity.gaming.help_i.session.domain.model.converters.ScheSessionIdAttributeConverter;

@@ -1,6 +1,6 @@
 package com.complexity.gaming.help_i.application.domain.service;
 
-import com.complexity.gaming.help_i.application.domain.model.ExpertApplication;
+import com.complexity.gaming.help_i.application.domain.model.aggregate.ExpertApplication;
 import com.complexity.gaming.help_i.security.domain.model.Expert;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

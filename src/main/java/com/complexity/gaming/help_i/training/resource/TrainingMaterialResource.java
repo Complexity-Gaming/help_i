@@ -2,7 +2,7 @@ package com.complexity.gaming.help_i.training.resource;
 
 import com.complexity.gaming.help_i.training.domain.model.TrainingDetail;
 import com.complexity.gaming.help_i.training.domain.model.TrainingId;
-import com.complexity.gaming.help_i.security.resource.ExpertResource;
+import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
 
 public class TrainingMaterialResource {
 

@@ -3,7 +3,7 @@ package com.complexity.gaming.help_i.session.service;
 import com.complexity.gaming.help_i.session.domain.model.IndividualSession;
 import com.complexity.gaming.help_i.session.domain.repository.IndividualSessionRepository;
 import com.complexity.gaming.help_i.session.domain.service.IndividualSessionService;
-import com.complexity.gaming.help_i.exception.ResourceNotFoundException;
+import com.complexity.gaming.help_i.shared.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
 package com.complexity.gaming.help_i.training.domain.model;
 
-import com.complexity.gaming.help_i.domain.model.Money;
+import com.complexity.gaming.help_i.shared.model.Money;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;

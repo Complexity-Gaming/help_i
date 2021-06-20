@@ -1,10 +1,10 @@
 package com.complexity.gaming.help_i.session.resource;
 
-import com.complexity.gaming.help_i.domain.model.Money;
+import com.complexity.gaming.help_i.shared.model.Money;
 import com.complexity.gaming.help_i.session.domain.model.ScheSessionId;
 import com.complexity.gaming.help_i.session.domain.model.SessionDate;
-import com.complexity.gaming.help_i.security.resource.ExpertResource;
-import com.complexity.gaming.help_i.security.resource.PlayerResource;
+import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
+import com.complexity.gaming.help_i.security.application.transform.resource.PlayerResource;
 
 public class ScheduledSessionResource {
 

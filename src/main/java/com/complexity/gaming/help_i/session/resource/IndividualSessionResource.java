@@ -1,7 +1,7 @@
 package com.complexity.gaming.help_i.session.resource;
 
-import com.complexity.gaming.help_i.security.resource.ExpertResource;
-import com.complexity.gaming.help_i.security.resource.PlayerResource;
+import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
+import com.complexity.gaming.help_i.security.application.transform.resource.PlayerResource;
 
 public class IndividualSessionResource {
 
