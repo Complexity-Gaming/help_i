@@ -2,13 +2,11 @@ package com.complexity.gaming.help_i.games.application;
 
 import com.complexity.gaming.help_i.games.domain.model.aggregate.GameModel;
 import com.complexity.gaming.help_i.games.domain.repository.GameRepository;
-import com.complexity.gaming.help_i.games.domain.service.GameFacade;
 import com.complexity.gaming.help_i.games.domain.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import proto.Game;
 
 import java.util.List;
 

@@ -20,5 +20,9 @@ public class ProviderInformation implements Serializable {
         this.storyLine = storyLine;
         this.summary = summary;
     }
+
+    public ProviderInformation() {
+
+    }
 }
 
