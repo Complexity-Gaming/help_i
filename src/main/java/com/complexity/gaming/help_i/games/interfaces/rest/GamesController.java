@@ -25,7 +25,7 @@ public class GamesController {
         this.gameService = gameService;
         this.games = new ArrayList<>();
         games.add(new GameModel().setId(1L).setProviderId(1L)
-        .SetProviderInformation(new ProviderInformation("Counter-Strike: Global Offensiv",
+        .SetProviderInformation(new ProviderInformation("Counter-Strike: Global Offensive",
                 "//images.igdb.com/igdb/image/upload/t_1080p/co1vce.jpg",
                 2000,1500, null, "CS:GO is the fourth iteration of Valve's " +
                 "team-based modern-military first-person shooter that features new and updated versions of the classic" +
@@ -52,7 +52,7 @@ public class GamesController {
                 )));
         games.add(new GameModel().setId(4L).setProviderId(4L)
                 .SetProviderInformation(new ProviderInformation("Call of Duty: Warzone",
-                        "//images.igdb.com/igdb/image/upload/t_1080p/co1wzo.jpg",
+                        "//images.igdb.com/igdb/image/upload/t_1080p/co20o8.jpg",
                         2427,1820, null
                         ,"Welcome to Warzone, the new massive free-to-play combat arena from the world of Modern Warfare®. Drop in, armor up, loot for rewards, and battle your way to the top."
                 )));
