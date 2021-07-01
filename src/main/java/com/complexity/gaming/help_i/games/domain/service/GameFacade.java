@@ -1,10 +1,10 @@
 package com.complexity.gaming.help_i.games.domain.service;
 
+import model.GameModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import proto.Game;
 
-public interface  GameFacade {
-    Page<Game> getAllGames(Pageable pageable);
-    Game getGameById(Long gameId);
+public interface GameFacade {
+    Page<GameModel> getAllGames(Pageable pageable, String fields);
+    GameModel getGameById(int gameId);
 }
