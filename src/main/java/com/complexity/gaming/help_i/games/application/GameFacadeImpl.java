@@ -1,11 +1,8 @@
-/*
 package com.complexity.gaming.help_i.games.application;
-
 import api.igdb.apicalypse.APICalypse;
 import api.igdb.request.IGDBFacade;
 import com.complexity.gaming.help_i.games.domain.service.GameFacade;
 import com.complexity.gaming.help_i.shared.exception.ResourceNotFoundException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import model.GameModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -44,4 +41,3 @@ public class GameFacadeImpl implements GameFacade {
         }
     }
 }
-*/

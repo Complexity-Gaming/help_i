@@ -3,6 +3,7 @@ package com.complexity.gaming.help_i.games.application;
 import com.complexity.gaming.help_i.games.application.transform.resource.SaveGameResource;
 import com.complexity.gaming.help_i.games.domain.model.aggregate.Game;
 import com.complexity.gaming.help_i.games.domain.repository.GameRepository;
+import com.complexity.gaming.help_i.games.domain.service.GameFacade;
 import com.complexity.gaming.help_i.games.domain.service.GameService;
 import model.GameModel;
 import org.springframework.beans.factory.annotation.Autowired;
