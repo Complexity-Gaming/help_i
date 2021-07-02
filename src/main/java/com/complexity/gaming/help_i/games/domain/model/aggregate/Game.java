@@ -1,42 +1,53 @@
 package com.complexity.gaming.help_i.games.domain.model.aggregate;
 
 import com.complexity.gaming.help_i.games.domain.model.valueobjects.ProviderInformation;
+import model.GameModel;
 
 import javax.persistence.*;
 
 @Entity
-public class GameModel {
+@Table(name = "games")
+public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long providerId;
-    @Embedded
+    private int providerId;
+    private String name;
+    @Transient
     private ProviderInformation providerInformation;
-    public GameModel SetProviderInformation(ProviderInformation providerInformation){
-        this.providerInformation = providerInformation;
+    public Game setProviderInformation(GameModel model){
+        this.providerInformation = new ProviderInformation(model);
         return this;
-    };
-
+    }
     public Long getId() {
         return id;
     }
 
-    public GameModel setId(Long id) {
+    public Game setId(Long id) {
         this.id = id;
         return this;
     }
 
-    public Long getProviderId() {
+    public int getProviderId() {
         return providerId;
     }
 
-    public GameModel setProviderId(Long providerId) {
+    public Game setProviderId(int providerId) {
         this.providerId = providerId;
         return this;
     }
 
     public ProviderInformation getProviderInformation() {
         return providerInformation;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Game setName(String name) {
+        this.name = name;
+        return this;
     }
 }
 
