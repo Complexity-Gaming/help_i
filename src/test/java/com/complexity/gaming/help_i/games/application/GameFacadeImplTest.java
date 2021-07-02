@@ -1,12 +1,10 @@
 package com.complexity.gaming.help_i.games.application;
 
-import api.igdb.apicalypse.APICalypse;
-import api.igdb.request.IGDBFacade;
-import com.complexity.gaming.help_i.games.domain.model.aggregate.Game;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import model.CoverModel;
-import model.GameModel;
-import model.ScreenshotModel;
+import idgbsdk.apicalypse.APICalypse;
+import idgbsdk.model.CoverModel;
+import idgbsdk.model.GameModel;
+import idgbsdk.model.ScreenshotModel;
+import idgbsdk.request.IGDBFacade;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.Assert;
 
