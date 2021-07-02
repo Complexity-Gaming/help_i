@@ -1,10 +1,10 @@
 package com.complexity.gaming.help_i.games.domain.model.valueobjects;
 
-import api.igdb.util.ImageBuilder;
-import api.igdb.util.ImageSize;
-import api.igdb.util.ImageType;
-import model.GameModel;
-import model.ScreenshotModel;
+import idgbsdk.model.GameModel;
+import idgbsdk.model.ScreenshotModel;
+import idgbsdk.util.ImageBuilder;
+import idgbsdk.util.ImageSize;
+import idgbsdk.util.ImageType;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;

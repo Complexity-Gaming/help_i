@@ -1,7 +1,7 @@
 package com.complexity.gaming.help_i.games.domain.model.aggregate;
 
 import com.complexity.gaming.help_i.games.domain.model.valueobjects.ProviderInformation;
-import model.GameModel;
+import idgbsdk.model.GameModel;
 
 import javax.persistence.*;
 

@@ -1,9 +1,9 @@
 package com.complexity.gaming.help_i.games.application;
-import api.igdb.apicalypse.APICalypse;
-import api.igdb.request.IGDBFacade;
 import com.complexity.gaming.help_i.games.domain.service.GameFacade;
 import com.complexity.gaming.help_i.shared.exception.ResourceNotFoundException;
-import model.GameModel;
+import idgbsdk.apicalypse.APICalypse;
+import idgbsdk.model.GameModel;
+import idgbsdk.request.IGDBFacade;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
