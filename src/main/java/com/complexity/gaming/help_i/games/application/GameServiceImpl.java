@@ -3,7 +3,6 @@ package com.complexity.gaming.help_i.games.application;
 import com.complexity.gaming.help_i.games.application.transform.resource.SaveGameResource;
 import com.complexity.gaming.help_i.games.domain.model.aggregate.Game;
 import com.complexity.gaming.help_i.games.domain.repository.GameRepository;
-import com.complexity.gaming.help_i.games.domain.service.GameFacade;
 import com.complexity.gaming.help_i.games.domain.service.GameService;
 import model.GameModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;
+
 
 import java.util.List;
 import java.util.stream.Collectors;

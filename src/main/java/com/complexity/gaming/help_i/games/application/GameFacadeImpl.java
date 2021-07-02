@@ -1,3 +1,4 @@
+/*
 package com.complexity.gaming.help_i.games.application;
 
 import api.igdb.apicalypse.APICalypse;
@@ -43,3 +44,4 @@ public class GameFacadeImpl implements GameFacade {
         }
     }
 }
+*/

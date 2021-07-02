@@ -18,6 +18,7 @@ public class GamesController {
     @Autowired
     private GameMapper mapper;
 
+
     @GetMapping("/games")
     public Page<GameResource> getAllGames(Pageable pageable){
         return gameService.getAllGames(pageable).map(game -> mapper.convertToResource(game));
