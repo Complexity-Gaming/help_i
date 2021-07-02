@@ -7,4 +7,3 @@ public interface GameFacade {
     Page<GameModel> getAllGames(Pageable pageable, String fields);
     GameModel getGameById(int gameId);
 }
-
