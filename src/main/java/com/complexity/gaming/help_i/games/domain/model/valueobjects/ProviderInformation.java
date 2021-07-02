@@ -126,10 +126,6 @@ public class ProviderInformation implements Serializable {
         this.backgroundWidth = backgroundWidth;
         return this;
     }
-
-    public ProviderInformation() {
-
-    }
 }
 
 
