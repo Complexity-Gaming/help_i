@@ -10,6 +10,16 @@ public class TrainingMaterialResource {
     private ExpertResource expert;
     private TrainingId material;
     private TrainingDetail detail;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public TrainingMaterialResource setDescription(String description) {
+        this.description = description;
+        return this;
+    }
 
     public Long getGame() {
         return game;
