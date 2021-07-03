@@ -39,11 +39,14 @@ public class ExpertController {
     public ExpertResource getExpertById(@PathVariable(name = "id") Long expertId){
         return convertToResource(expertService.getExpertById(expertId));
     }
+    @GetMapping("/experts/email/{email}")
+    public ExpertResource getExpertByEmail(@PathVariable(name = "email") String email){
+        return convertToResource(expertService.getExpertByEmail(email));
+    }
 
-    @PostMapping("/experts")
+    @PostMapping("/experts/sign-up")
     public ExpertResource createExpert(@Valid @RequestBody SaveExpertResource resource){
-        return convertToResource(expertService.createExpert(
-        convertToEntity(resource)));
+        return convertToResource(expertService.createExpert(convertToEntity(resource)));
     }
 
     @PutMapping("/experts/{id}")

@@ -9,6 +9,18 @@ public class SaveTrainingMaterialResource {
 
     private TrainingDetail detail;
 
+
+    public Long getGame() {
+        return game;
+    }
+
+    public SaveTrainingMaterialResource setGame(Long game) {
+        this.game = game;
+        return this;
+    }
+
+    private Long game;
+
     public TrainingId getMaterial() {
         return material;
     }

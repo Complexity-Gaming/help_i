@@ -38,6 +38,11 @@ public class TrainingMaterialServiceImpl implements TrainingMaterialService {
     }
 
     @Override
+    public Page<TrainingMaterial> getAllTrainingMaterialsByGameId(Long gameId, Pageable pageable) {
+        return trainingMaterialRepository.findByGame(gameId, pageable);
+    }
+
+    @Override
     public Page<TrainingMaterial> getAllTrainingMaterialsByPlayerId(Long playerId, Pageable pageable) {
         return playerRepository.findById(playerId).map(player -> {
             List<TrainingMaterial> trainings = player.getTrainings();

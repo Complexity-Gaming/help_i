@@ -1,6 +1,7 @@
 package com.complexity.gaming.help_i.security.interfaces.rest;
 
 import com.complexity.gaming.help_i.security.application.transform.mapper.PlayerMapper;
+import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
 import com.complexity.gaming.help_i.security.domain.model.Player;
 import com.complexity.gaming.help_i.security.domain.service.PlayerService;
 import com.complexity.gaming.help_i.security.application.transform.resource.PlayerResource;
@@ -36,7 +37,11 @@ public class PlayersController {
     public PlayerResource getPlayerById(@PathVariable(name = "id") Long playerId){
         return mapper.convertToResource(playerService.getPlayerById(playerId));
     }
-    @PostMapping("/players")
+    @GetMapping("/players/email/{email}")
+    public PlayerResource getExpertByEmail(@PathVariable(name = "email") String email){
+        return mapper.convertToResource(playerService.getPlayerByEmail(email));
+    }
+    @PostMapping("/players/sign-up")
     public PlayerResource createPlayer(@Valid @RequestBody SavePlayerResource resource){
         return mapper.convertToResource(playerService.createPlayer(
                 mapper.convertToEntity(resource)));

@@ -22,16 +22,28 @@ public abstract class Person extends AuditModel {
 
     @NotNull
     @Size(max = 100)
-    @NaturalId
     private String email;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Person setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    @NotNull
+    private String password;
 
     @NotNull
     private Date birthDate;
 
-    public Person(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate) {
+    public Person(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate, @NotNull String password) {
         this.name = name;
         this.email = email;
         this.birthDate = birthDate;
+        this.password = password;
     }
 
     public Person() {

@@ -11,6 +11,17 @@ public class TrainingMaterialResource {
     private TrainingId material;
     private TrainingDetail detail;
 
+    public Long getGame() {
+        return game;
+    }
+
+    public TrainingMaterialResource setGame(Long game) {
+        this.game = game;
+        return this;
+    }
+
+    private Long game;
+
     public Long getId() {
         return id;
     }
