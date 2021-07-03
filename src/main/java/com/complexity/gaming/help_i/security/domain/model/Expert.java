@@ -10,9 +10,21 @@ import java.util.Date;
 @Table(name = "experts")
 public class Expert extends Person {
 
-    public Expert(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate, @NotNull String password, Long game) {
+
+    private String photoUrl;
+    private String whyMe;
+    private String experience;
+    private String userName;
+
+    public Expert(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email,
+                  @NotNull Date birthDate, @NotNull String password, Long game, @NotNull String photoUrl,
+                  @NotNull String whyMe, @NotNull String experience, @NotNull String userName) {
         super(name, email, birthDate, password);
         this.game = game;
+        this.photoUrl = photoUrl;
+        this.whyMe = whyMe;
+        this.userName = userName;
+        this.experience = experience;
     }
     public Long getGame() {
         return game;
@@ -26,5 +38,41 @@ public class Expert extends Person {
     private Long game;
 
     public Expert() {
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public Expert setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+        return this;
+    }
+
+    public String getWhyMe() {
+        return whyMe;
+    }
+
+    public Expert setWhyMe(String whyMe) {
+        this.whyMe = whyMe;
+        return this;
+    }
+
+    public String getExperience() {
+        return experience;
+    }
+
+    public Expert setExperience(String experience) {
+        this.experience = experience;
+        return this;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public Expert setUserName(String userName) {
+        this.userName = userName;
+        return this;
     }
 }
