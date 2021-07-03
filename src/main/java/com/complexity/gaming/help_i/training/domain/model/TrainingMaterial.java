@@ -6,6 +6,7 @@ import com.complexity.gaming.help_i.training.domain.model.converters.TrainingIdA
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -17,6 +18,18 @@ public class TrainingMaterial {
 
     @Embedded
     private TrainingDetail detail;
+
+    public Long getGame() {
+        return game;
+    }
+
+    public TrainingMaterial setGame(Long game) {
+        this.game = game;
+        return this;
+    }
+
+    @NotNull
+    private Long game;
 
     @Convert(converter = TrainingIdAttributeConverter.class)
     private TrainingId material;
@@ -34,8 +47,9 @@ public class TrainingMaterial {
     public TrainingMaterial() {
     }
 
-    public TrainingMaterial(TrainingDetail detail, TrainingId material, Expert expert, List<Player> players) {
+    public TrainingMaterial(TrainingDetail detail, TrainingId material, Expert expert, List<Player> players, Long game) {
         this.detail = detail;
+        this.game = game;
         this.material = material;
         this.expert = expert;
         this.players = players;

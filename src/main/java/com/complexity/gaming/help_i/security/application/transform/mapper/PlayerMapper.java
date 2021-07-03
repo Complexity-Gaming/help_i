@@ -19,6 +19,7 @@ public class PlayerMapper {
         return (Player) new Player()
                 .setEmail(resource.getEmail())
                 .setName(resource.getName())
+                .setPassword(resource.getPassword())
                 .setBirthDate(resource.getBirthDate());
 
     }

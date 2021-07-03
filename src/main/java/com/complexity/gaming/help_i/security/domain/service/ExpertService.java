@@ -8,8 +8,10 @@ import org.springframework.http.ResponseEntity;
 public interface ExpertService {
 
     Page<Expert> getAllExperts(Pageable pageable);
+    Page<Expert> getAllByGameId(Pageable pageable, Long gameId);
     Expert getExpertById(Long expertId);
     Expert createExpert(Expert expert);
     Expert updateExpert(Long expertId,Expert expertDetails);
     ResponseEntity<?> deleteExpert(Long expertId);
+    Expert getExpertByEmail(String email);
 }

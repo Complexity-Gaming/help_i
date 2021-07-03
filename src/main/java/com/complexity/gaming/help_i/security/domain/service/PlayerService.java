@@ -1,5 +1,6 @@
 package com.complexity.gaming.help_i.security.domain.service;
 
+import com.complexity.gaming.help_i.security.domain.model.Expert;
 import com.complexity.gaming.help_i.security.domain.model.Player;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,4 +13,5 @@ public interface PlayerService {
     Player createPlayer(Player player);
     Player updatePlayer(Long playerId, Player playerDetails);
     ResponseEntity<?> deletePlayer(Long playerId);
+    Player getPlayerByEmail(String email);
 }

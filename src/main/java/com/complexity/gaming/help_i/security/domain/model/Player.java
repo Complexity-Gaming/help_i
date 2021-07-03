@@ -5,6 +5,7 @@ import com.complexity.gaming.help_i.training.domain.model.TrainingMaterial;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -12,15 +13,16 @@ import java.util.List;
 @Table(name = "players")
 public class Player extends Person {
 
+
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name ="player_trainings",
             joinColumns =  {@JoinColumn(name = "player_id")},
             inverseJoinColumns = {@JoinColumn(name = "training_id")})
-    private List<TrainingMaterial> trainings;
+    private List<TrainingMaterial> trainings = new ArrayList<>();
 
-    public Player(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate, List<TrainingMaterial> trainings) {
-        super(name, email, birthDate);
+    public Player(@NotNull @Size(max = 100) String name, @NotNull @Size(max = 100) String email, @NotNull Date birthDate,@NotNull String password, List<TrainingMaterial> trainings) {
+        super(name, email, birthDate, password);
         this.trainings = trainings;
     }
 

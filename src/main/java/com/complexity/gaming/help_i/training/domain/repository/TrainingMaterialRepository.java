@@ -12,4 +12,5 @@ import java.util.Optional;
 public interface TrainingMaterialRepository extends JpaRepository<TrainingMaterial, Long> {
     Page<TrainingMaterial> findByExpertId(Long expertId, Pageable pageable);
     Optional<TrainingMaterial> findByIdAndExpertId(Long id, Long expertId);
+    Page<TrainingMaterial> findByGame(Long gameId, Pageable pageable);
 }
