@@ -38,6 +38,7 @@ public class PlayersController {
     public PlayerResource getPlayerById(@PathVariable(name = "id") Long playerId){
         return mapper.convertToResource(playerService.getPlayerById(playerId));
     }
+    @CrossOrigin
     @GetMapping("/players/email/{email}")
     public PlayerResource getExpertByEmail(@PathVariable(name = "email") String email){
         return mapper.convertToResource(playerService.getPlayerByEmail(email));
