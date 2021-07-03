@@ -1,4 +1,4 @@
-package com.complexity.gaming.help_i.configuration;
+package com.complexity.gaming.help_i.shared.config;
 
 import com.complexity.gaming.help_i.games.application.transform.mapper.GameMapper;
 import com.complexity.gaming.help_i.security.application.transform.mapper.PlayerMapper;

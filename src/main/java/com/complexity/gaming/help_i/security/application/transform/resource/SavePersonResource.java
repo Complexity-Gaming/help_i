@@ -15,8 +15,21 @@ public abstract class SavePersonResource {
     @NotBlank
     private String email;
 
+    public String getPassword() {
+        return password;
+    }
+
+    public SavePersonResource setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    @NotNull
+    @NotBlank
+    private String password;
     @NotNull
     private Date birthDate;
+
 
     public String getName() {
         return name;
