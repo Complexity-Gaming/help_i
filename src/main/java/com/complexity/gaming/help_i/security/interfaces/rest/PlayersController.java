@@ -44,7 +44,7 @@ public class PlayersController {
     }
     @CrossOrigin
     @GetMapping("/players/email/{email}")
-    public PlayerResource getExpertByEmail(@PathVariable(name = "email") String email){
+    public PlayerResource getPlayerByEmail(@PathVariable(name = "email") String email){
         return mapper.convertToResource(playerService.getPlayerByEmail(email));
     }
     @PostMapping("/players/sign-up")
