@@ -1,12 +1,9 @@
 package com.complexity.gaming.help_i.security.interfaces.rest;
 
 import com.complexity.gaming.help_i.security.application.transform.mapper.PlayerMapper;
-import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
-import com.complexity.gaming.help_i.security.domain.model.Player;
 import com.complexity.gaming.help_i.security.domain.service.PlayerService;
 import com.complexity.gaming.help_i.security.application.transform.resource.PlayerResource;
 import com.complexity.gaming.help_i.security.application.transform.resource.SavePlayerResource;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -44,7 +41,7 @@ public class PlayersController {
     }
     @CrossOrigin
     @GetMapping("/players/email/{email}")
-    public PlayerResource getExpertByEmail(@PathVariable(name = "email") String email){
+    public PlayerResource getPlayerByEmail(@PathVariable(name = "email") String email){
         return mapper.convertToResource(playerService.getPlayerByEmail(email));
     }
     @PostMapping("/players/sign-up")
