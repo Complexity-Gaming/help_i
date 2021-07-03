@@ -4,7 +4,9 @@ import com.complexity.gaming.help_i.games.application.transform.mapper.GameMappe
 import com.complexity.gaming.help_i.security.application.transform.mapper.PlayerMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin
 @Configuration
 public class MapperConfiguration {
     @Bean
