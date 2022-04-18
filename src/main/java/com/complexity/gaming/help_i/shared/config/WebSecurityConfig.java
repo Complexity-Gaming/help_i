@@ -60,7 +60,9 @@ public class WebSecurityConfig extends
                         "/api/players/sign-up",
                         "/api/games/**",
                         "/api/experts/{expertId}/trainings",
-                        "/api/trainings/*").permitAll()
+                        "/api/trainings/*",
+                        "/api/experts/**",
+                        "/api/players/**").permitAll()
                 .anyRequest().authenticated().and()
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationEntryPoint).and()

@@ -16,6 +16,8 @@ public class TrainingMaterial {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String description;
+
     @Embedded
     private TrainingDetail detail;
 
@@ -34,6 +36,8 @@ public class TrainingMaterial {
     @Convert(converter = TrainingIdAttributeConverter.class)
     private TrainingId material;
 
+
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "expert_id", nullable = false)
     @JsonIgnore
@@ -47,12 +51,13 @@ public class TrainingMaterial {
     public TrainingMaterial() {
     }
 
-    public TrainingMaterial(TrainingDetail detail, TrainingId material, Expert expert, List<Player> players, Long game) {
+    public TrainingMaterial(TrainingDetail detail, TrainingId material, Expert expert, List<Player> players, Long game, String description) {
         this.detail = detail;
         this.game = game;
         this.material = material;
         this.expert = expert;
         this.players = players;
+        this.description = description;
     }
 
     public Long getId() {
@@ -98,6 +103,15 @@ public class TrainingMaterial {
 
     public TrainingMaterial setDetail(TrainingDetail detail) {
         this.detail = detail;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public TrainingMaterial setDescription(String description) {
+        this.description = description;
         return this;
     }
 }
