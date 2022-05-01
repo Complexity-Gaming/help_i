@@ -14,7 +14,7 @@ public class GameFacadeImpl implements GameFacade {
     private final IGDBFacade facade = new IGDBFacade();
 
     public GameFacadeImpl() {
-        facade.setCredentials("cg5hbasfqcgsspirqwwy5x69z1l14p", "b7tlqwkf3d2ztuod5ftntsdb0hsd3i");
+        facade.setCredentials("cg5hbasfqcgsspirqwwy5x69z1l14p", "6bb1vdi2pu14t4sdydzlv8rv986c86");
     }
 
     @Override

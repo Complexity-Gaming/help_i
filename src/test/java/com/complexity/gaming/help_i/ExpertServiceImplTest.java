@@ -2,6 +2,7 @@ package com.complexity.gaming.help_i;
 
 import com.complexity.gaming.help_i.security.domain.model.Expert;
 import com.complexity.gaming.help_i.security.domain.repository.ExpertRepository;
+import com.complexity.gaming.help_i.security.domain.repository.PlayerRepository;
 import com.complexity.gaming.help_i.security.domain.service.ExpertService;
 import com.complexity.gaming.help_i.shared.exception.ResourceNotFoundException;
 import com.complexity.gaming.help_i.security.application.ExpertServiceImpl;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
@@ -26,6 +28,10 @@ public class ExpertServiceImplTest {
 
     @MockBean
     private ExpertRepository expertRepository;
+    @MockBean
+    private PlayerRepository playerRepository;
+    @MockBean
+    private PasswordEncoder passwordEncoder;
     @Autowired
     private ExpertService expertService;
 
