@@ -3,6 +3,8 @@ package com.complexity.gaming.help_i.security.interfaces.rest;
 import com.complexity.gaming.help_i.security.application.transform.resource.ExpertResource;
 import com.complexity.gaming.help_i.security.domain.model.Expert;
 import com.complexity.gaming.help_i.security.domain.service.ExpertService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -27,6 +29,8 @@ public class GameExpertsController {
     @Autowired
     private ExpertService expertService;
 
+    @Operation(summary = "Get all experts for a game Id", description = "Get all experts for a game Id", tags = {"game-experts"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @GetMapping
     public Page<ExpertResource> getAllExpertsByGameId(Pageable pageable, @PathVariable(name = "gameId") Long gameId){
         List<ExpertResource> experts = expertService.getAllByGameId(pageable,gameId)

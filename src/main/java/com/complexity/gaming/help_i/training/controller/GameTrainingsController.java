@@ -6,6 +6,8 @@ import com.complexity.gaming.help_i.security.domain.service.ExpertService;
 import com.complexity.gaming.help_i.training.domain.model.TrainingMaterial;
 import com.complexity.gaming.help_i.training.domain.service.TrainingMaterialService;
 import com.complexity.gaming.help_i.training.resource.TrainingMaterialResource;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -31,6 +33,8 @@ public class GameTrainingsController {
     @Autowired
     private TrainingMaterialService trainingMaterialService;
 
+    @Operation(summary = "Get all trainings for a game Id", description = "Get all trainings for a game Id", tags = {"game-trainings"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @GetMapping
     public Page<TrainingMaterialResource> getAllTrainingsByGameId(Pageable pageable, @PathVariable(name = "gameId") Long gameId){
         List<TrainingMaterialResource> games = trainingMaterialService.getAllTrainingMaterialsByGameId(gameId,pageable)
