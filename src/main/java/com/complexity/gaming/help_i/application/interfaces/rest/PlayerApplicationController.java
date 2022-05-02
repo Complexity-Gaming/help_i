@@ -4,6 +4,8 @@ import com.complexity.gaming.help_i.application.domain.model.aggregate.ExpertApp
 import com.complexity.gaming.help_i.application.domain.service.ExpertApplicationService;
 import com.complexity.gaming.help_i.application.application.transform.resource.ExpertApplicationResource;
 import com.complexity.gaming.help_i.application.application.transform.resource.SaveExpertApplicationResource;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,6 +28,8 @@ public class PlayerApplicationController {
     @Autowired
     private ExpertApplicationService expertApplicationService;
 
+    @Operation(summary = "Get all applications for a player Id", description = "Get all applications for a player Id", tags = {"player-applications"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @GetMapping("/players/{playerId}/applications")
     public Page<ExpertApplicationResource> getAllExpertApplicationByApplicantId(@PathVariable Long playerId, Pageable pageable) {
         List<ExpertApplicationResource> applications = expertApplicationService.getAllExpertApplicationsByApplicantId(playerId, pageable)
@@ -33,7 +37,8 @@ public class PlayerApplicationController {
                 .collect(Collectors.toList());
         return new PageImpl<>(applications, pageable, applications.size());
     }
-
+    @Operation(summary = "Create a new application with a player Id", description = "Create a new application with a player Id", tags = {"player-applications"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @PostMapping("/players/{playerId}/applications")
     public ExpertApplicationResource sendExpertApplication(@PathVariable Long playerId,
                                                             @Valid @RequestBody SaveExpertApplicationResource resource) {

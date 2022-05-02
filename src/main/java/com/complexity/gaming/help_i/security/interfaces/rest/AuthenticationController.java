@@ -4,6 +4,8 @@ import com.complexity.gaming.help_i.security.application.communication.Authentic
 import com.complexity.gaming.help_i.security.application.communication.AuthenticationResponse;
 import com.complexity.gaming.help_i.security.domain.service.DefaultUserDetailsService;
 import com.complexity.gaming.help_i.shared.util.JwtCenter;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +30,8 @@ public class AuthenticationController {
     @Autowired
     private DefaultUserDetailsService userDetailsService;
 
+    @Operation(summary = "Authenticate user", description = "Authenticate user")
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @PostMapping("/sign-in")
     public ResponseEntity<?> generateAuthenticationToken(
             @RequestBody AuthenticationRequest request)

@@ -12,7 +12,7 @@ class GameFacadeImplTest {
     private final IGDBFacade facade = new IGDBFacade();
 
     public GameFacadeImplTest() {
-        facade.setCredentials("ov3od6hqyjyb0iurx0hbbvp6ijde7v", "24jlaiw72qgv0z64gi7h1tbz11x3dz");
+        facade.setCredentials("cg5hbasfqcgsspirqwwy5x69z1l14p", "6bb1vdi2pu14t4sdydzlv8rv986c86");
     }
     @Test
     void testGetCoverByGameIdResponseWithFieldsIdAndGameId() throws Exception {

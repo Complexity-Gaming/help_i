@@ -4,6 +4,8 @@ import com.complexity.gaming.help_i.training.domain.model.TrainingMaterial;
 import com.complexity.gaming.help_i.training.domain.service.TrainingMaterialService;
 import com.complexity.gaming.help_i.training.resource.SaveTrainingMaterialResource;
 import com.complexity.gaming.help_i.training.resource.TrainingMaterialResource;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,6 +27,8 @@ public class ExpertTrainingMaterialsController {
     @Autowired
     private TrainingMaterialService trainingMaterialService;
 
+    @Operation(summary = "Get training material by expert id", description = "Get training material by expert id", tags = {"expert-trainingMaterials"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @GetMapping("/experts/{expertId}/trainings")
     public Page<TrainingMaterialResource> getAllTrainingMaterialsByExpertId(@PathVariable Long expertId, Pageable pageable) {
         List<TrainingMaterialResource> trainings = trainingMaterialService.getAllTrainingMaterialsByExpertId(expertId, pageable)
@@ -33,6 +37,8 @@ public class ExpertTrainingMaterialsController {
         return new PageImpl<>(trainings, pageable, trainings.size());
     }
 
+    @Operation(summary = "Save training material", description = "Save training material", tags = {"expert-trainingMaterials"})
+    @ApiResponse(responseCode = "200", description = "Successful operation")
     @PostMapping("/experts/{expertId}/trainings")
     public TrainingMaterialResource publishTrainingMaterial(@PathVariable Long expertId,
                                                            @Valid @RequestBody SaveTrainingMaterialResource resource) {
